@@ -3,14 +3,15 @@ package com.beezleapp.googlemapsbug
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.beezleapp.googlemapsbug.ui.theme.GoogleMapsBugTheme
+import com.google.maps.android.compose.GoogleMap
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,9 +30,17 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Scaffold(
+        topBar = {
+            TopAppBar(title = { Text("Title") })
+        }) { paddingValues ->
+        Column(modifier = Modifier.padding(paddingValues)) {
+            GoogleMap()
+        }
+    }
 }
 
 @Preview(showBackground = true)
