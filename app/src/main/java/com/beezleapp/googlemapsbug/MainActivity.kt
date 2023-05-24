@@ -39,6 +39,11 @@ fun Greeting(name: String) {
         }) { paddingValues ->
         Column(modifier = Modifier.padding(paddingValues)) {
             GoogleMap()
+            Text("Some text")
+            Text("Some text")
+            Text("Some text")
+            Text("Some text")
+            Text("Some text")
         }
     }
 }
