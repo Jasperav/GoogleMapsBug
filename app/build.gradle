@@ -62,6 +62,7 @@ dependencies {
     implementation "androidx.compose.ui:ui:1.4.3"
     implementation "androidx.compose.material3:material3:1.1.0"
     implementation 'com.google.maps.android:maps-compose:2.11.4'
+    implementation 'com.google.maps.android:maps-compose-utils:2.11.4'
     implementation "androidx.core:core-ktx:$core_ktx"
     implementation "com.google.code.gson:gson:$gson"
     implementation 'androidx.appcompat:appcompat:1.6.1'
